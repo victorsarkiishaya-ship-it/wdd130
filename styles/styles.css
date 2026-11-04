@@ -1,0 +1,55 @@
+/* Navigation */
+nav {
+    background-color: #333;
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    padding: 10px;
+    display: block;
+}
+
+h1 {
+    color: steelblue;
+}
+
+main {
+    max-width: 840px;
+}
+
+/* Main image */
+main img {
+    width: 200px;
+    height: auto;
+    border: 2px solid #333;
+    padding: 2px;
+    box-shadow: 0 0 10px gray;
+}
+
+/* Aside */
+aside {
+    width: 300px;
+    margin: 20px;
+    border: 1px solid #333;
+    padding: 10px;
+    background-color: #eee;
+    color: #333;
+}
+
+aside img {
+    width: 200px;
+    height: auto;
+}
+
+/* Paragraph */
+p {
+    padding: 0;
+}
+
+/* Footer */
+footer {
+    margin-top: 20px;
+    border-top: 1px solid #333;
+    text-align: center;
+}
