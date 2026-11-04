@@ -10,6 +10,14 @@ nav a {
     display: block;
 }
 
+h1 {
+    color: steelblue;
+}
+
+main {
+    max-width: 840px;
+}
+
 /* Main image */
 main img {
     width: 200px;
