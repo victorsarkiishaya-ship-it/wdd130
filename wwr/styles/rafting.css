@@ -19,6 +19,7 @@
 body {
     font-family: var(--body-font);
     color: var(--accent1-color);
+    background-color: var(--accent2-color);
 }
 
 /* Step 4.6: Limit Page Width and Center Content */
@@ -42,6 +43,7 @@ nav, p, section, article {
 /* Step 4.9: Remove Underlines from Social Media Links in Footer */
 .socialmedia a {
     text-decoration: none;
+    color: var(--secondary-color);
 }
 
 /* Step 5.1: Style Hero Div Position */
@@ -65,7 +67,7 @@ nav, p, section, article {
     text-align: center;
     opacity: 0.8;
     background-color: var(--accent1-color);
-    color: #fff; /* white text */
+    color: #fff;
 }
 
 /* Step 5.4: Style Article Overlay */
@@ -75,6 +77,7 @@ nav, p, section, article {
     left: 20px;
     right: 20px;
     background-color: rgba(244, 241, 222, 0.9);
+    border: 2px solid var(--secondary-color);
     padding: 16px;
 }
 
