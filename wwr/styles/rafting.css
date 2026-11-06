@@ -1,0 +1,86 @@
+/* Step 4.3: Define CSS Variables */
+:root {
+    --primary-color: #004d61;
+    --secondary-color: #e07a5f;
+    --accent1-color: #333333;
+    --accent2-color: #f4f1de;
+    --heading-font: 'Georgia', serif;
+    --body-font: 'Arial', sans-serif;
+}
+
+/* Step 4.4: Reset Box-Model Properties */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Step 4.5: Style Body Text Content */
+body {
+    font-family: var(--body-font);
+    color: var(--accent1-color);
+}
+
+/* Step 4.6: Limit Page Width and Center Content */
+header, main, footer {
+    width: 840px;
+    margin: 0 auto;
+}
+
+/* Step 4.7: Style Headings */
+h1, h2 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+}
+
+/* Step 4.8: Style Nav, Paragraphs, Sections, and Articles */
+nav, p, section, article {
+    margin: 16px;
+    padding: 8px;
+}
+
+/* Step 4.9: Remove Underlines from Social Media Links in Footer */
+.socialmedia a {
+    text-decoration: none;
+}
+
+/* Step 5.1: Style Hero Div Position */
+.hero {
+    position: relative;
+}
+
+/* Step 5.2: Style Hero Image */
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Step 5.3: Style H1 Heading Overlay */
+.hero h1 {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    padding: 16px;
+    text-align: center;
+    opacity: 0.8;
+    background-color: var(--accent1-color);
+    color: #fff; /* white text */
+}
+
+/* Step 5.4: Style Article Overlay */
+.hero article {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    background-color: rgba(244, 241, 222, 0.9);
+    padding: 16px;
+}
+
+/* Step 5.5: Float Image Inside Article */
+.hero article img {
+    float: right;
+    width: 125px;
+    margin-left: 10px;
+}
