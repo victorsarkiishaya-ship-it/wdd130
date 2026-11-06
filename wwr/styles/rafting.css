@@ -28,6 +28,12 @@ header, main, footer {
     margin: 0 auto;
 }
 
+/* Header & Logo Sizing */
+header img {
+    width: 150px;
+    height: auto;
+}
+
 /* Step 4.7: Style Headings */
 h1, h2 {
     font-family: var(--heading-font);
@@ -40,10 +46,15 @@ nav, p, section, article {
     padding: 8px;
 }
 
-/* Step 4.9: Remove Underlines from Social Media Links in Footer */
+/* Step 4.9: Remove Underlines & Size Social Media Links in Footer */
 .socialmedia a {
     text-decoration: none;
     color: var(--secondary-color);
+}
+
+.socialmedia img {
+    width: 32px;
+    height: auto;
 }
 
 /* Step 5.1: Style Hero Div Position */
