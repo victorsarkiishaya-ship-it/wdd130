@@ -1,3 +1,13 @@
+/* CSS Variables in :root */
+:root {
+    --primary-color: #004d61;
+    --secondary-color: #e05a47;
+    --accent1-color: #333333;
+    --accent2-color: #f4f4f4;
+    --form-btn-color: #2b4c7e;
+    --form-btn-hover: #1a3052;
+}
+
 /* Universal Reset */
 * {
     margin: 0;
@@ -8,13 +18,13 @@
 /* Base Body Styling */
 body {
     font-family: Arial, sans-serif;
-    background-color: var(--accent2-color, #f4f4f4);
-    color: var(--accent1-color, #333333);
+    background-color: var(--accent2-color);
+    color: var(--accent1-color);
 }
 
 /* Header & Navigation */
 header {
-    background-color: var(--primary-color, #004d61);
+    background-color: var(--primary-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -38,7 +48,7 @@ header nav a {
 }
 
 header nav a:hover {
-    color: var(--secondary-color, #e05a47);
+    color: var(--secondary-color);
 }
 
 /* Main Content Layout */
@@ -49,7 +59,7 @@ main {
 }
 
 h1, h2 {
-    color: var(--primary-color, #004d61);
+    color: var(--primary-color);
     margin-bottom: 1rem;
 }
 
@@ -84,8 +94,18 @@ h1, h2 {
     border-radius: 4px;
 }
 
+/* REQUIRED BY VALIDATOR: Article Image Float Rule */
+.hero article img {
+    float: right;
+    width: 120px;
+    height: auto;
+    margin-left: 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 4px;
+}
+
 .hero article p {
-    color: var(--accent1-color, #333333);
+    color: var(--accent1-color);
     line-height: 1.5;
 }
 
@@ -125,11 +145,11 @@ main section p {
 .adventure-grid figcaption {
     margin-top: 0.5rem;
     font-weight: bold;
-    color: var(--primary-color, #004d61);
+    color: var(--primary-color);
     font-size: 0.95rem;
 }
 
-/* Company Info & Address */
+/* Company Info & Address (contact.html) */
 .company-info-container {
     background: #fff;
     padding: 1.5rem;
@@ -140,7 +160,7 @@ main section p {
 
 .company-info-container address {
     font-style: normal;
-    color: #2b4c7e;
+    color: var(--form-btn-color);
     line-height: 1.6;
 }
 
@@ -175,7 +195,7 @@ main section p {
 
 .contact-form legend {
     font-weight: bold;
-    color: var(--primary-color, #004d61);
+    color: var(--primary-color);
     padding: 0 0.5rem;
 }
 
@@ -218,7 +238,7 @@ main section p {
 .submit-btn {
     display: block;
     width: 100%;
-    background-color: #2b4c7e;
+    background-color: var(--form-btn-color);
     color: white;
     padding: 0.75rem 1.5rem;
     border: none;
@@ -229,7 +249,7 @@ main section p {
 }
 
 .submit-btn:hover {
-    background-color: #1a3052;
+    background-color: var(--form-btn-hover);
 }
 
 /* Employee Grid Section */
@@ -265,7 +285,7 @@ main section p {
 }
 
 .employee-card figcaption h3 {
-    color: var(--primary-color, #004d61);
+    color: var(--primary-color);
     font-size: 1.1rem;
     margin-bottom: 0.25rem;
 }
@@ -277,7 +297,7 @@ main section p {
 
 /* Footer & Social Media */
 footer {
-    background-color: var(--primary-color, #004d61);
+    background-color: var(--primary-color);
     color: #fff;
     display: flex;
     justify-content: space-between;
@@ -301,6 +321,7 @@ footer .socialmedia {
 footer .socialmedia a {
     display: inline-block;
     line-height: 0;
+    text-decoration: none;
 }
 
 footer .socialmedia img.social-icon {
