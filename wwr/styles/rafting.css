@@ -232,7 +232,7 @@ main section p {
     background-color: #1a3052;
 }
 
-/* Employee Grid Section - Fixed explicit sizing */
+/* Employee Grid Section */
 .employees-section {
     margin-bottom: 3rem;
 }
@@ -303,9 +303,11 @@ footer .socialmedia a {
     line-height: 0;
 }
 
-footer .socialmedia a img {
+footer .socialmedia img.social-icon {
     width: 24px !important;
     height: 24px !important;
+    min-width: 24px !important;
+    min-height: 24px !important;
     max-width: 24px !important;
     max-height: 24px !important;
     object-fit: contain;
