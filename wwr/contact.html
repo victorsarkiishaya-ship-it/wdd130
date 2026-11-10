@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - White Water Rafting Company</title>
+    <meta name="description" content="Get in touch with White Water Rafting Company. Find our contact details, location map, employee profiles, and a contact form for inquiries or reservations.">
+    <link rel="stylesheet" href="styles/rafting.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="logo-box">
+            <img src="images/logo.png" alt="Rafting Company Logo">
+        </div>
+        <nav>
+            <ul class="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="trips.html">Trips</a></li>
+                <li><a href="contact.html" class="active">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+        <div class="contact-hero">
+            <h1>Contact Us</h1>
+        </div>
+
+        <!-- Company Info & Map Section -->
+        <section class="contact-details-section">
+            <div class="company-info-container">
+                <h2>White Water Rafting Company</h2>
+                <address>
+                    <p>123 Main River Street</p>
+                    <p>Kolob, California</p>
+                    <p><strong>Phone:</strong> +1 999 999 9999</p>
+                    <p><strong>Email:</strong> <a href="mailto:info@whitewater.com">info@whitewater.com</a></p>
+                </address>
+            </div>
+
+            <!-- Google Map Embed -->
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509374!2d144.9537363153169!3d-37.81627974202166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577d6ea32fba561!2sExample%20St%2C%20Melbourne%20VIC%203000%2C%20Australia!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </section>
+
+        <!-- Contact Form Section -->
+        <section class="form-section">
+            <form action="#" method="post" class="contact-form">
+                <fieldset>
+                    <legend>Send Us a Message</legend>
+                    
+                    <!-- Name Field -->
+                    <div class="form-item">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Your Full Name" required>
+                    </div>
+
+                    <!-- Email Field -->
+                    <div class="form-item">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="yourname@example.com" required>
+                    </div>
+
+                    <!-- Purpose Radio Buttons -->
+                    <fieldset class="purpose-group">
+                        <legend>Purpose of Message:</legend>
+                        <div class="radio-option">
+                            <input type="radio" id="general" name="purpose" value="General Inquiry" checked>
+                            <label for="general">General Inquiry</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="reservation" name="purpose" value="Reservation Question">
+                            <label for="reservation">Reservation Question</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="suggestion" name="purpose" value="Website Suggestion">
+                            <label for="suggestion">Website Suggestion</label>
+                        </div>
+                    </fieldset>
+
+                    <!-- Message Textarea -->
+                    <div class="form-item">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Type your message here..." required></textarea>
+                    </div>
+
+                    <!-- Newsletter Checkbox -->
+                    <div class="form-item checkbox-item">
+                        <input type="checkbox" id="newsletter" name="newsletter" value="yes">
+                        <label for="newsletter">Please subscribe me to the monthly newsletter</label>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="submit-btn">Get in Touch!</button>
+                </fieldset>
+            </form>
+        </section>
+
+        <!-- Employee Profiles Section -->
+        <section class="employees-section">
+            <h2>We Are Here to Serve You</h2>
+            <div class="employee-grid">
+                <figure class="employee-card">
+                    <img src="images/employee1.jpg" alt="Profile photo of Sarah Jenkins">
+                    <figcaption>
+                        <h3>Sarah Jenkins</h3>
+                        <p>Lead River Guide</p>
+                    </figcaption>
+                </figure>
+
+                <figure class="employee-card">
+                    <img src="images/employee2.jpg" alt="Profile photo of Marcus Vance">
+                    <figcaption>
+                        <h3>Marcus Vance</h3>
+                        <p>Safety Director</p>
+                    </figcaption>
+                </figure>
+
+                <figure class="employee-card">
+                    <img src="images/employee3.jpg" alt="Profile photo of Elena Rostova">
+                    <figcaption>
+                        <h3>Elena Rostova</h3>
+                        <p>Operations Manager</p>
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 White Water Rafting Company | Your Name</p>
+        <nav class="social-links">
+            <a href="https://facebook.com" target="_blank">Facebook</a>
+            <a href="https://twitter.com" target="_blank">Twitter</a>
+            <a href="https://instagram.com" target="_blank">Instagram</a>
+        </nav>
+    </footer>
+</body>
+</html>
