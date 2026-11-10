@@ -1,85 +1,62 @@
-/* Step 4.3: Define CSS Variables */
-:root {
-    --primary-color: #004d61;
-    --secondary-color: #e07a5f;
-    --accent1-color: #333333;
-    --accent2-color: #f4f1de;
-    --heading-font: 'Georgia', serif;
-    --body-font: 'Arial', sans-serif;
-}
-
-/* Step 4.4: Reset Box-Model Properties */
+/* Universal Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Step 4.5: Style Body Text Content */
+/* Base Body Styling */
 body {
-    font-family: var(--body-font);
-    color: var(--accent1-color);
-    background-color: var(--accent2-color);
+    font-family: Arial, sans-serif;
+    background-color: var(--accent2-color, #f4f4f4);
+    color: var(--accent1-color, #333333);
 }
 
-/* Step 4.6: Limit Page Width and Center Content */
-header, main, footer {
-    width: 840px;
-    margin: 0 auto;
-}
-
-/* ================= HEADER (Week 4: CSS Grid) ================= */
+/* Header & Navigation */
 header {
-    display: grid;
-    grid-template-columns: auto 1fr;   /* logo takes its width, nav fills the rest */
-    align-items: center;               /* vertically center logo & nav */
-    background-color: var(--primary-color);
-    padding: 16px;
+    background-color: var(--primary-color, #004d61);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
 }
 
 header img {
-    width: 150px;
+    width: 80px;
     height: auto;
 }
 
-/* ================= NAV (Week 4: CSS Flex) ================= */
-nav {
+header nav {
     display: flex;
-    justify-content: flex-end;   /* push links to the right side */
-    gap: 8px;
+    gap: 1.5rem;
 }
 
-nav a {
-    display: block;
-    padding: 8px 16px;
+header nav a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
 }
 
-nav a:hover {
-    background-color: var(--secondary-color);
-    color: #fff;
+header nav a:hover {
+    color: var(--secondary-color, #e05a47);
 }
 
-/* ================= HEADINGS ================= */
+/* Main Content Layout */
+main {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
 h1, h2 {
-    font-family: var(--heading-font);
-    color: var(--primary-color);
+    color: var(--primary-color, #004d61);
+    margin-bottom: 1rem;
 }
 
-section {
-    padding: 16px;
-}
-
-section h2 {
-    text-align: center;
-    margin-bottom: 16px;
-}
-
-/* ================= HERO (Week 3 styles kept) ================= */
+/* Hero Section (about.html) */
 .hero {
     position: relative;
+    margin-bottom: 2rem;
 }
 
 .hero img {
@@ -91,12 +68,10 @@ section h2 {
 .hero h1 {
     position: absolute;
     top: 20px;
-    width: 100%;
-    padding: 16px;
-    text-align: center;
-    opacity: 0.9;
-    background-color: var(--accent1-color);
-    color: #fff;
+    left: 20px;
+    background: rgba(244, 244, 244, 0.9);
+    padding: 0.5rem 1rem;
+    margin: 0;
 }
 
 .hero article {
@@ -104,284 +79,204 @@ section h2 {
     bottom: 20px;
     left: 20px;
     right: 20px;
-    background-color: rgba(244, 241, 222, 0.9);
-    border: 2px solid var(--secondary-color);
-    padding: 16px;
-    margin: 0;   /* override so it sits flush inside hero */
-}
-
-.hero article p {
-    margin: 0;
-    padding: 0;
-}
-
-.hero article img {
-    float: right;
-    width: 125px;
-    margin-left: 10px;
-}
-
-/* ================= HISTORY SECTION (Week 4: 3-column layout) ================= */
-.history-content {
-    display: grid;
-    grid-template-columns: 1fr 200px 1fr;  /* text | image | text */
-    align-items: center;
-    gap: 24px;
-}
-
-.history-content p {
-    margin: 0;
-    padding: 8px;
-}
-
-.history-content img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-/* ================= ADVENTURES SECTION (Week 4: five figures) ================= */
-.adventure-gallery {
-    display: flex;
-    justify-content: space-between;
-    gap: 12px;
-}
-
-.adventure-gallery figure {
-    margin: 0;
-    flex: 1;                     /* equal-width columns */
-}
-
-.adventure-gallery img {
-    width: 100%;
-    height: 150px;               /* consistent height; or use auto */
-    object-fit: cover;
-    display: block;
+    background: rgba(244, 244, 244, 0.9);
+    padding: 1rem;
     border-radius: 4px;
 }
 
-.adventure-gallery figcaption {
+.hero article p {
+    color: var(--accent1-color, #333333);
+    line-height: 1.5;
+}
+
+/* History Section (about.html) */
+main section:first-of-type {
+    margin-bottom: 2.5rem;
+}
+
+main section p {
+    line-height: 1.6;
+    color: #444;
+}
+
+/* Adventure Grid Section (about.html - 5 Figures) */
+.adventure-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.adventure-grid figure {
+    background: #fff;
+    padding: 0.5rem;
+    border-radius: 8px;
     text-align: center;
-    font-size: 0.85rem;
-    padding-top: 6px;
-    color: var(--primary-color);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-/* ================= FOOTER (Week 4: flex, icons on right) ================= */
-footer {
-    display: flex;
-    justify-content: space-between;  /* text left, social right */
-    align-items: center;
-    background-color: var(--primary-color);
-    color: #fff;
-    padding: 16px;
+.adventure-grid img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 4px;
 }
 
-footer p {
-    margin: 0;
-    padding: 0;
+.adventure-grid figcaption {
+    margin-top: 0.5rem;
+    font-weight: bold;
+    color: var(--primary-color, #004d61);
+    font-size: 0.95rem;
 }
 
-/* Week 3 social styles kept */
-.socialmedia {
-    display: flex;                 /* icons horizontal */
-    gap: 12px;
-    margin: 0;
-    padding: 0;
-}
-
-.socialmedia a {
-    text-decoration: none;
-}
-
-.socialmedia img {
-    width: 32px;
-    height: auto;
-}
-
-/* ==========================
-   CONTACT US PAGE STYLES
-   ========================== */
-
-/* Company Info Section */
-.contact-details-section {
-    margin: 2rem auto;
-    text-align: center;
-}
-
+/* Contact Page Form & Map Styles */
 .company-info-container {
+    background: #fff;
+    padding: 1.5rem;
     margin-bottom: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
 }
 
 .company-info-container address {
     font-style: normal;
+    color: #2b4c7e;
     line-height: 1.6;
 }
 
-.company-info-container address a {
-    color: #2b4c7e;
-    text-decoration: none;
-}
-
-.company-info-container address a:hover {
-    text-decoration: underline;
-}
-
-/* Google Map Styling */
 .map-container {
-    margin: 1.5rem auto;
-    max-width: 800px;
-    padding: 0 1rem;
+    width: 100%;
+    margin-bottom: 2rem;
+    text-align: center;
 }
 
 .map-container iframe {
     width: 100%;
-    height: 350px;
-    border: none; /* Replaces the inline border:0 safely */
-    border-radius: 8px;
+    max-width: 100%;
+    height: 450px;
+    border: 0;
 }
 
-/* Contact Form Layout */
-.form-section {
-    max-width: 600px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-}
-
-.contact-form {
-    background-color: #f9f9f9;
+.contact-form-section {
+    background: #fff;
     padding: 2rem;
     border-radius: 8px;
-    border: 1px solid #ddd;
+    margin-bottom: 2rem;
 }
 
 .contact-form fieldset {
     border: 1px solid #ccc;
     padding: 1.5rem;
-    border-radius: 6px;
+    margin-bottom: 1.5rem;
+    border-radius: 4px;
 }
 
 .contact-form legend {
     font-weight: bold;
+    color: var(--primary-color, #004d61);
     padding: 0 0.5rem;
 }
 
-.form-item {
-    margin-bottom: 1.25rem;
-    display: flex;
-    flex-direction: column;
-}
-
-.form-item label {
+.contact-form label {
+    display: block;
     margin-bottom: 0.5rem;
     font-weight: bold;
 }
 
-.form-item input[type="text"],
-.form-item input[type="email"],
-.form-item textarea {
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
     padding: 0.75rem;
+    margin-bottom: 1rem;
     border: 1px solid #ccc;
     border-radius: 4px;
-    font-size: 1rem;
-    font-family: inherit;
 }
 
-/* Radio Buttons & Checkbox */
-.purpose-group {
-    border: 1px solid #ccc;
-    padding: 1rem;
-    margin-bottom: 1.25rem;
+.contact-form input[type="radio"],
+.contact-form input[type="checkbox"] {
+    margin-right: 0.5rem;
 }
 
-.radio-option, 
-.checkbox-item {
+.contact-form label.checkbox-label {
     display: flex;
-    flex-direction: row;
     align-items: center;
-    gap: 0.5rem;
-    margin-bottom: 0.5rem;
+    font-weight: normal;
 }
 
-.radio-option input, 
-.checkbox-item input {
-    width: auto;
-    cursor: pointer;
-}
-
-.checkbox-item {
-    margin-top: 0.5rem;
-}
-
-/* Submit Button Styling */
 .submit-btn {
-    background-color: #2b4c7e; /* Matches your site's primary theme */
+    background-color: #2b4c7e;
     color: white;
     padding: 0.75rem 1.5rem;
     border: none;
     border-radius: 4px;
     font-size: 1rem;
     cursor: pointer;
-    font-weight: bold;
-    width: 100%;
-    transition: background-color 0.2s ease;
 }
 
 .submit-btn:hover {
     background-color: #1a3052;
 }
 
-/* Employee Profile Cards Section */
+/* Contact Page Employee Grid */
 .employees-section {
-    text-align: center;
-    margin: 3rem auto;
-    max-width: 1000px;
-    padding: 0 1rem;
-}
-
-.employees-section h2 {
-    margin-bottom: 1.5rem;
+    margin-bottom: 3rem;
 }
 
 .employee-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1.5rem;
 }
 
 .employee-card {
-    margin: 0;
+    background: #f9f9f9;
     padding: 1rem;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
     border-radius: 8px;
     text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .employee-card img {
-    width: 100%;
-    max-width: 150px;
-    height: 150px;
-    border-radius: 50%;
+    width: 120px;
+    height: 120px;
     object-fit: cover;
-    margin-bottom: 0.75rem;
+    border-radius: 50%;
+    margin-bottom: 1rem;
 }
 
 .employee-card figcaption h3 {
-    margin: 0.5rem 0 0.25rem 0;
+    color: var(--primary-color, #004d61);
     font-size: 1.1rem;
+    margin-bottom: 0.25rem;
 }
 
 .employee-card figcaption p {
-    margin: 0;
     color: #555;
     font-size: 0.95rem;
 }
 
-/* Responsive adjustment for mobile screens */
-@media (max-width: 768px) {
-    .employee-grid {
-        grid-template-columns: 1fr;
-    }
+/* Footer & Social Media */
+footer {
+    background-color: var(--primary-color, #004d61);
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    margin-top: 3rem;
 }
 
+footer p {
+    font-size: 0.9rem;
+}
+
+footer .socialmedia {
+    display: flex;
+    gap: 1rem;
+}
+
+footer .socialmedia a img {
+    width: 24px;
+    height: 24px;
+}
