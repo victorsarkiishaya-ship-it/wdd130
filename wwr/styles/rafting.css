@@ -158,7 +158,7 @@ main section p {
     border: 0;
 }
 
-/* Contact Form Section (Stacked Layout) */
+/* Contact Form Section */
 .contact-form-section {
     background: #fff;
     padding: 2rem;
@@ -232,7 +232,7 @@ main section p {
     background-color: #1a3052;
 }
 
-/* Employee Grid Section */
+/* Employee Grid Section - Fixed explicit sizing */
 .employees-section {
     margin-bottom: 3rem;
 }
@@ -252,11 +252,16 @@ main section p {
 }
 
 .employee-card img {
-    width: 120px;
-    height: 120px;
+    width: 120px !important;
+    height: 120px !important;
+    min-width: 120px !important;
+    min-height: 120px !important;
+    max-width: 120px !important;
+    max-height: 120px !important;
     object-fit: cover;
     border-radius: 50%;
-    margin-bottom: 1rem;
+    margin: 0 auto 1rem auto;
+    display: block;
 }
 
 .employee-card figcaption h3 {
@@ -279,6 +284,8 @@ footer {
     align-items: center;
     padding: 1.5rem 2rem;
     margin-top: 3rem;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
 footer p {
@@ -288,9 +295,18 @@ footer p {
 footer .socialmedia {
     display: flex;
     gap: 1rem;
+    align-items: center;
+}
+
+footer .socialmedia a {
+    display: inline-block;
+    line-height: 0;
 }
 
 footer .socialmedia a img {
-    width: 24px;
-    height: 24px;
+    width: 24px !important;
+    height: 24px !important;
+    max-width: 24px !important;
+    max-height: 24px !important;
+    object-fit: contain;
 }
