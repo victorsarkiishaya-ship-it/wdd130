@@ -121,7 +121,7 @@ section h2 {
     margin-left: 10px;
 }
 
-/* ================= HISTORY SECTION ================= */
+/* ================= HISTORY SECTION (Week 4: 3-column layout) ================= */
 .history-content {
     display: grid;
     grid-template-columns: 1fr 200px 1fr;
@@ -140,7 +140,7 @@ section h2 {
     display: block;
 }
 
-/* ================= ADVENTURES SECTION ================= */
+/* ================= ADVENTURES SECTION (Week 4: five figures) ================= */
 .adventure-gallery {
     display: flex;
     justify-content: space-between;
@@ -167,7 +167,7 @@ section h2 {
     color: var(--primary-color);
 }
 
-/* ================= FOOTER ================= */
+/* ================= FOOTER (Week 4: flex, icons on right) ================= */
 footer {
     display: flex;
     justify-content: space-between;
@@ -180,6 +180,7 @@ footer {
 footer p {
     margin: 0;
     padding: 0;
+    color: #fff;
 }
 
 .socialmedia {
