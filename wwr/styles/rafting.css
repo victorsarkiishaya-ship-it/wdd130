@@ -1,335 +1,100 @@
-/* CSS Variables in :root */
+/* Step 4.3: Define CSS Variables */
 :root {
     --primary-color: #004d61;
-    --secondary-color: #e05a47;
+    --secondary-color: #e07a5f;
     --accent1-color: #333333;
-    --accent2-color: #f4f4f4;
-    --form-btn-color: #2b4c7e;
-    --form-btn-hover: #1a3052;
+    --accent2-color: #f4f1de;
+    --heading-font: 'Georgia', serif;
+    --body-font: 'Arial', sans-serif;
 }
 
-/* Universal Reset */
+/* Step 4.4: Reset Box-Model Properties */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Base Body Styling */
+/* Step 4.5: Style Body Text Content */
 body {
-    font-family: Arial, sans-serif;
-    background-color: var(--accent2-color);
+    font-family: var(--body-font);
     color: var(--accent1-color);
+    background-color: var(--accent2-color);
 }
 
-/* Header & Navigation */
-header {
-    background-color: var(--primary-color);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
+/* Step 4.6: Limit Page Width and Center Content */
+header, main, footer {
+    width: 840px;
+    margin: 0 auto;
 }
 
+/* Header & Logo Sizing */
 header img {
-    width: 80px;
+    width: 150px;
     height: auto;
 }
 
-header nav {
-    display: flex;
-    gap: 1.5rem;
+/* Step 4.7: Style Headings */
+h1, h2 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
 }
 
-header nav a {
-    color: #fff;
+/* Step 4.8: Style Nav, Paragraphs, Sections, and Articles */
+nav, p, section, article {
+    margin: 16px;
+    padding: 8px;
+}
+
+/* Step 4.9: Remove Underlines & Size Social Media Links in Footer */
+.socialmedia a {
     text-decoration: none;
-    font-weight: bold;
-}
-
-header nav a:hover {
     color: var(--secondary-color);
 }
 
-/* Main Content Layout */
-main {
-    max-width: 1000px;
-    margin: 2rem auto;
-    padding: 0 1rem;
+.socialmedia img {
+    width: 32px;
+    height: auto;
 }
 
-h1, h2 {
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-}
-
-/* Hero Section (about.html) */
+/* Step 5.1: Style Hero Div Position */
 .hero {
     position: relative;
-    margin-bottom: 2rem;
 }
 
+/* Step 5.2: Style Hero Image */
 .hero img {
     width: 100%;
     height: auto;
     display: block;
 }
 
+/* Step 5.3: Style H1 Heading Overlay */
 .hero h1 {
     position: absolute;
     top: 20px;
-    left: 20px;
-    background: rgba(244, 244, 244, 0.9);
-    padding: 0.5rem 1rem;
-    margin: 0;
+    width: 100%;
+    padding: 16px;
+    text-align: center;
+    opacity: 0.8;
+    background-color: var(--accent1-color);
+    color: #fff;
 }
 
+/* Step 5.4: Style Article Overlay */
 .hero article {
     position: absolute;
     bottom: 20px;
     left: 20px;
     right: 20px;
-    background: rgba(244, 244, 244, 0.9);
-    padding: 1rem;
-    border-radius: 4px;
+    background-color: rgba(244, 241, 222, 0.9);
+    border: 2px solid var(--secondary-color);
+    padding: 16px;
 }
 
-/* REQUIRED BY VALIDATOR: Article Image Float Rule */
+/* Step 5.5: Float Image Inside Article */
 .hero article img {
     float: right;
-    width: 120px;
-    height: auto;
-    margin-left: 1rem;
-    margin-bottom: 0.5rem;
-    border-radius: 4px;
-}
-
-.hero article p {
-    color: var(--accent1-color);
-    line-height: 1.5;
-}
-
-/* History Section (about.html) */
-main section:first-of-type {
-    margin-bottom: 2.5rem;
-}
-
-main section p {
-    line-height: 1.6;
-    color: #444;
-}
-
-/* Adventure Grid Section (about.html) */
-.adventure-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 1.5rem;
-    margin-top: 1rem;
-}
-
-.adventure-grid figure {
-    background: #fff;
-    padding: 0.5rem;
-    border-radius: 8px;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.adventure-grid img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 4px;
-}
-
-.adventure-grid figcaption {
-    margin-top: 0.5rem;
-    font-weight: bold;
-    color: var(--primary-color);
-    font-size: 0.95rem;
-}
-
-/* Company Info & Address (contact.html) */
-.company-info-container {
-    background: #fff;
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
-    border-radius: 8px;
-    text-align: center;
-}
-
-.company-info-container address {
-    font-style: normal;
-    color: var(--form-btn-color);
-    line-height: 1.6;
-}
-
-/* Map Container */
-.map-container {
-    width: 100%;
-    margin-bottom: 2rem;
-    text-align: center;
-}
-
-.map-container iframe {
-    width: 100%;
-    max-width: 100%;
-    height: 450px;
-    border: 0;
-}
-
-/* Contact Form Section */
-.contact-form-section {
-    background: #fff;
-    padding: 2rem;
-    border-radius: 8px;
-    margin-bottom: 2rem;
-}
-
-.contact-form fieldset {
-    border: 1px solid #ccc;
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
-    border-radius: 4px;
-}
-
-.contact-form legend {
-    font-weight: bold;
-    color: var(--primary-color);
-    padding: 0 0.5rem;
-}
-
-.contact-form label {
-    display: block;
-    width: 100%;
-    margin-top: 1rem;
-    margin-bottom: 0.35rem;
-    font-weight: bold;
-}
-
-.contact-form input[type="text"],
-.contact-form input[type="email"],
-.contact-form textarea {
-    display: block;
-    width: 100%;
-    padding: 0.75rem;
-    margin-bottom: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-.contact-form fieldset input[type="radio"],
-.contact-form fieldset input[type="checkbox"] {
-    display: inline-block;
-    width: auto;
-    margin-right: 0.5rem;
-}
-
-.contact-form fieldset label {
-    display: flex;
-    align-items: center;
-    font-weight: normal;
-    margin-top: 0.5rem;
-    cursor: pointer;
-    width: auto;
-}
-
-.submit-btn {
-    display: block;
-    width: 100%;
-    background-color: var(--form-btn-color);
-    color: white;
-    padding: 0.75rem 1.5rem;
-    border: none;
-    border-radius: 4px;
-    font-size: 1rem;
-    cursor: pointer;
-    margin-top: 1rem;
-}
-
-.submit-btn:hover {
-    background-color: var(--form-btn-hover);
-}
-
-/* Employee Grid Section */
-.employees-section {
-    margin-bottom: 3rem;
-}
-
-.employee-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-}
-
-.employee-card {
-    background: #f9f9f9;
-    padding: 1rem;
-    border-radius: 8px;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.employee-card img {
-    width: 120px !important;
-    height: 120px !important;
-    min-width: 120px !important;
-    min-height: 120px !important;
-    max-width: 120px !important;
-    max-height: 120px !important;
-    object-fit: cover;
-    border-radius: 50%;
-    margin: 0 auto 1rem auto;
-    display: block;
-}
-
-.employee-card figcaption h3 {
-    color: var(--primary-color);
-    font-size: 1.1rem;
-    margin-bottom: 0.25rem;
-}
-
-.employee-card figcaption p {
-    color: #555;
-    font-size: 0.95rem;
-}
-
-/* Footer & Social Media */
-footer {
-    background-color: var(--primary-color);
-    color: #fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.5rem 2rem;
-    margin-top: 3rem;
-    flex-wrap: wrap;
-    gap: 1rem;
-}
-
-footer p {
-    font-size: 0.9rem;
-}
-
-footer .socialmedia {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-}
-
-footer .socialmedia a {
-    display: inline-block;
-    line-height: 0;
-    text-decoration: none;
-}
-
-footer .socialmedia img.social-icon {
-    width: 24px !important;
-    height: 24px !important;
-    min-width: 24px !important;
-    min-height: 24px !important;
-    max-width: 24px !important;
-    max-height: 24px !important;
-    object-fit: contain;
+    width: 125px;
+    margin-left: 10px;
 }
