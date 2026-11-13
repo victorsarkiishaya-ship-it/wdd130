@@ -55,7 +55,7 @@
             </div>
         </section>
 
-        <section class="form-section">
+              <section class="form-section">
             <form action="#" method="post">
                 <fieldset>
                     <legend>Send Us a Message</legend>
@@ -68,11 +68,11 @@
                         <input type="email" id="email" name="email" required>
                     </div>
                     <div class="form-item">
-                        <label>Purpose of Message</label>
+                        <p>Purpose of Message</p>
                         <div class="radio-group">
-                            <label><input type="radio" name="purpose" value="general" checked> General Inquiry</label>
-                            <label><input type="radio" name="purpose" value="reservation"> Reservation Question</label>
-                            <label><input type="radio" name="purpose" value="suggestion"> Website Suggestion</label>
+                            <label for="purpose-general"><input type="radio" id="purpose-general" name="purpose" value="general" checked> General Inquiry</label>
+                            <label for="purpose-reservation"><input type="radio" id="purpose-reservation" name="purpose" value="reservation"> Reservation Question</label>
+                            <label for="purpose-suggestion"><input type="radio" id="purpose-suggestion" name="purpose" value="suggestion"> Website Suggestion</label>
                         </div>
                     </div>
                     <div class="form-item">
@@ -80,12 +80,13 @@
                         <textarea id="message" name="message" rows="4" required></textarea>
                     </div>
                     <div class="form-item checkbox-item">
-                        <label><input type="checkbox" name="newsletter" value="yes"> Please subscribe me to the monthly newsletter</label>
+                        <label for="newsletter"><input type="checkbox" id="newsletter" name="newsletter" value="yes"> Please subscribe me to the monthly newsletter</label>
                     </div>
                 </fieldset>
                 <button type="submit" class="submit-btn">Get in Touch</button>
             </form>
         </section>
+
     </main>
 
     <footer>
