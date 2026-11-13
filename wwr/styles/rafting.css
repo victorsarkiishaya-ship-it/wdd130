@@ -196,7 +196,10 @@ footer p {
 
 .socialmedia img {
     width: 32px;
-    height: /* Contact Page Specific Styles */
+    height: auto;
+}
+
+/* ================= CONTACT PAGE SPECIFIC STYLES ================= */
 .contact-hero {
     text-align: center;
     padding: 1.5rem;
@@ -322,8 +325,3 @@ legend {
 .submit-btn:hover {
     background-color: #0369a1;
 }
-
-
-
-
-
