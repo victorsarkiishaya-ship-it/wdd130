@@ -58,7 +58,7 @@ nav a {
 }
 
 nav a:hover {
-    background-color: var(--secondary-color);
+    background-color: #b3573f; /* darker shade of secondary, keeps 4.5:1 contrast with white */
     color: #fff;
 }
 
@@ -78,29 +78,30 @@ section h2 {
 }
 
 /* ================= CONTACT PAGE SPECIFIC STYLES ================= */
+
+/* Company info block at top of Contact page */
 .company-info-section {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    padding: 2rem;
-    max-width: 900px;
-    margin: 0 auto;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
+    padding: 2rem 1rem;
 }
 
-.company-details, .map-container {
-    flex: 1;
-    min-width: 280px;
-}
-
-.company-details h1 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
+.company-info-section h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 .company-details p {
     margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+
+/* Map and form side by side (matches wireframe) */
+.map-form-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: start;
+    padding: 1rem;
 }
 
 .map-container iframe {
@@ -140,9 +141,7 @@ section h2 {
 }
 
 .form-section {
-    max-width: 650px;
-    margin: 2rem auto;
-    padding: 1.5rem;
+    padding: 0;
 }
 
 fieldset {
@@ -206,7 +205,7 @@ legend {
 }
 
 .submit-btn:hover {
-    background-color: var(--secondary-color);
+    background-color: #b3573f; /* darker shade of secondary, ~4.8:1 contrast with white (fixes a11y flag) */
 }
 
 /* ================= FOOTER ================= */
