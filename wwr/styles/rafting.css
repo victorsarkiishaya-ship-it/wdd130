@@ -85,12 +85,13 @@ section h2 {
     padding: 2rem 1rem;
 }
 
-.company-info-section h1 {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-}
+.company-info-section h1,
 .company-info-section h2 {
     font-size: 2rem;
+}
+
+.company-info-section h1 {
+    margin-bottom: 1.5rem;
 }
 
 .company-details p {
