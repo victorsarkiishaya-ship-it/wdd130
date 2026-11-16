@@ -89,6 +89,9 @@ section h2 {
     font-size: 2rem;
     margin-bottom: 1.5rem;
 }
+.company-info-section h2 {
+    font-size: 2rem;
+}
 
 .company-details p {
     margin-bottom: 0.5rem;
