@@ -241,5 +241,235 @@ footer p {
 
 .socialmedia img {
     width: 32px;
-    height: auto;
+    height: 
+/* ================= WEEK 6 HOME PAGE ================= */
+
+/* Hero Image */
+.home-hero {
+    position: relative;
+    padding: 0;
+    overflow: hidden;
 }
+
+.home-hero img {
+    display: block;
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.home-hero h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 85%;
+    padding: 20px;
+    text-align: center;
+    color: #ffffff;
+    background-color: rgba(0, 77, 97, 0.85);
+    font-size: 2.5rem;
+    border-radius: 8px;
+}
+
+/* Newsletter Section */
+.newsletter-section {
+    background-color: #e3f0ed;
+    text-align: center;
+    margin: 20px 16px;
+    border-radius: 8px;
+}
+
+.newsletter-section p {
+    margin-bottom: 16px;
+    line-height: 1.6;
+}
+
+.newsletter-form {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.newsletter-form div {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 6px;
+}
+
+.newsletter-form label {
+    font-weight: bold;
+}
+
+.newsletter-form input {
+    padding: 12px;
+    border: 1px solid #999999;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.newsletter-form button {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    border: none;
+    padding: 13px 22px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.newsletter-form button:hover {
+    background-color: #b3573f;
+}
+
+/* Home Page Adventure Grid */
+.home-adventures {
+    padding: 24px 16px;
+}
+
+.home-adventures h2 {
+    margin-bottom: 24px;
+}
+
+.home-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.home-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.home-card img {
+    display: block;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.home-card h3 {
+    color: var(--primary-color);
+    text-align: center;
+    margin: 16px 10px;
+    font-family: var(--heading-font);
+}
+
+.home-card p {
+    padding: 0 16px 20px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Home Introduction */
+.home-introduction {
+    text-align: center;
+    padding: 30px 24px;
+    background-color: #e3f0ed;
+    margin: 16px;
+    border-radius: 8px;
+}
+
+.home-introduction p {
+    line-height: 1.7;
+    margin-bottom: 24px;
+}
+
+.home-cta {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: #222222;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 14px 28px;
+    border-radius: 6px;
+}
+
+.home-cta:hover {
+    background-color: #b3573f;
+    color: #ffffff;
+}
+
+/* ================= RESPONSIVE DESIGN ================= */
+
+@media screen and (max-width: 850px) {
+
+    header, main, footer {
+        width: 100%;
+    }
+
+    header {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 12px;
+    }
+
+    header nav {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    footer {
+        flex-wrap: wrap;
+        gap: 16px;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .map-form-section {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media screen and (max-width: 550px) {
+
+    .home-hero img {
+        height: 250px;
+    }
+
+    .home-hero h1 {
+        font-size: 1.7rem;
+        width: 90%;
+    }
+
+    .home-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .newsletter-form div {
+        width: 100%;
+    }
+
+    .newsletter-form button {
+        width: 100%;
+    }
+
+    .employee-grid figure {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .map-form-section {
+        padding: 12px;
+    }
+
+}
+
+
+
+
+
+
