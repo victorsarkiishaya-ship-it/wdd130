@@ -1,4 +1,10 @@
-/* Step 4.3: Define CSS Variables */
+
+/* =========================================
+   EXCITING EXPEDITIONS
+   WDD130 RAFTING WEBSITE
+   ========================================= */
+
+/* STEP 4.3: CSS VARIABLES */
 :root {
     --primary-color: #004d61;
     --secondary-color: #e07a5f;
@@ -8,62 +14,74 @@
     --body-font: 'Arial', sans-serif;
 }
 
-/* Step 4.4: Reset Box-Model Properties */
+/* STEP 4.4: CSS RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Step 4.5: Style Body Text Content */
+/* STEP 4.5: BODY */
 body {
     font-family: var(--body-font);
     color: var(--accent1-color);
     background-color: var(--accent2-color);
+    line-height: 1.5;
 }
 
-/* Step 4.6: Limit Page Width and Center Content */
-header, main, footer {
-    width: 840px;
+/* STEP 4.6: PAGE WIDTH */
+header,
+main,
+footer {
+    max-width: 840px;
+    width: 100%;
     margin: 0 auto;
 }
 
-/* ================= HEADER (Week 4: CSS Grid) ================= */
+/* =========================================
+   HEADER AND NAVIGATION
+   ========================================= */
+
 header {
     display: grid;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: 150px 1fr;
     align-items: center;
     background-color: var(--primary-color);
-    padding: 16px;
+    padding: 10px;
 }
 
 header img {
-    width: 150px;
+    width: 140px;
     height: auto;
 }
 
-/* ================= NAV (Week 4: CSS Flex) ================= */
-nav {
+header nav {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     gap: 8px;
 }
 
 nav a {
     display: block;
-    padding: 8px 16px;
-    color: #fff;
+    padding: 10px 14px;
+    color: #ffffff;
     text-decoration: none;
     font-weight: bold;
 }
 
 nav a:hover {
-    background-color: #b3573f; /* darker shade of secondary, keeps 4.5:1 contrast with white */
-    color: #fff;
+    background-color: #b3573f;
+    color: #ffffff;
 }
 
-/* ================= HEADINGS ================= */
-h1, h2 {
+/* =========================================
+   HEADINGS AND SECTIONS
+   ========================================= */
+
+h1,
+h2,
+h3 {
     font-family: var(--heading-font);
     color: var(--primary-color);
 }
@@ -77,35 +95,139 @@ section h2 {
     margin-bottom: 16px;
 }
 
-/* ================= CONTACT PAGE SPECIFIC STYLES ================= */
+/* =========================================
+   ABOUT PAGE
+   ========================================= */
 
-/* Company info block at top of Contact page */
-.company-info-section {
-    text-align: center;
-    padding: 2rem 1rem;
+.hero {
+    position: relative;
+    overflow: hidden;
 }
 
-.company-info-section h1,
-.company-info-section h2 {
-    font-size: 2rem;
+.hero > img {
+    display: block;
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.hero h1 {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    padding: 16px;
+    text-align: center;
+    color: #ffffff;
+    background-color: rgba(0, 77, 97, 0.85);
+}
+
+.hero article {
+    position: absolute;
+    bottom: 20px;
+    left: 5%;
+    width: 90%;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.hero article img {
+    float: right;
+    width: 150px;
+    height: 110px;
+    object-fit: cover;
+    margin-left: 15px;
+}
+
+.hero article p {
+    line-height: 1.6;
+}
+
+/* HISTORY */
+
+.history {
+    padding: 25px 16px;
+}
+
+.history-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    gap: 15px;
+}
+
+.history-content img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.history-content p {
+    line-height: 1.6;
+}
+
+/* ADVENTURES */
+
+.adventures {
+    padding: 25px 16px;
+}
+
+.adventure-gallery {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+}
+
+.adventure-gallery figure {
+    text-align: center;
+}
+
+.adventure-gallery img {
+    display: block;
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+}
+
+.adventure-gallery figcaption {
+    font-weight: bold;
+    margin-top: 8px;
+    font-size: 0.85rem;
+}
+
+/* =========================================
+   CONTACT PAGE
+   ========================================= */
+
+/* COMPANY INFORMATION */
+
+.company-info-section {
+    text-align: center;
+    padding: 25px 16px;
 }
 
 .company-info-section h1 {
-    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.company-info-section h2 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
 }
 
 .company-details p {
-    margin-bottom: 0.5rem;
-    line-height: 1.4;
+    margin-bottom: 8px;
 }
 
-/* Map and form side by side (matches wireframe) */
+/* MAP AND FORM */
+
 .map-form-section {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+    gap: 24px;
     align-items: start;
-    padding: 1rem;
+    padding: 16px;
 }
 
 .map-container iframe {
@@ -115,34 +237,7 @@ section h2 {
     border-radius: 8px;
 }
 
-.employee-section {
-    background-color: #eef2f5;
-    padding: 2rem 1rem;
-    text-align: center;
-}
-
-.employee-grid {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    flex-wrap: wrap;
-    margin-top: 1.5rem;
-}
-
-.employee-grid figure {
-    width: 220px;
-    background: #fff;
-    padding: 10px;
-    border-radius: 6px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.employee-grid img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 4px;
-}
+/* CONTACT FORM */
 
 .form-section {
     padding: 0;
@@ -150,25 +245,25 @@ section h2 {
 
 fieldset {
     border: 1px solid #cbd5e1;
-    padding: 1.5rem;
+    padding: 20px;
     border-radius: 8px;
     background-color: #ffffff;
-    margin-bottom: 1.5rem;
+    margin-bottom: 20px;
 }
 
 legend {
     font-weight: bold;
-    padding: 0 0.5rem;
+    padding: 0 8px;
     color: #1e293b;
 }
 
 .form-item {
-    margin-bottom: 1.2rem;
+    margin-bottom: 18px;
 }
 
 .form-item label {
     display: block;
-    margin-bottom: 0.4rem;
+    margin-bottom: 6px;
     font-weight: 600;
     color: #334155;
 }
@@ -177,74 +272,99 @@ legend {
 .form-item input[type="email"],
 .form-item textarea {
     width: 100%;
-    padding: 0.75rem;
+    padding: 12px;
     border: 1px solid #cbd5e1;
     border-radius: 4px;
     font-size: 1rem;
+    font-family: var(--body-font);
+}
+
+.form-item textarea {
+    resize: vertical;
 }
 
 .radio-group label,
 .checkbox-item label {
-    font-weight: normal;
     display: block;
-    margin-bottom: 0.4rem;
+    font-weight: normal;
+    margin-bottom: 8px;
     cursor: pointer;
+}
+
+.radio-group input,
+.checkbox-item input {
+    margin-right: 5px;
 }
 
 .checkbox-item {
-    margin-top: 1rem;
+    margin-top: 15px;
 }
 
+/* SUBMIT BUTTON */
+
 .submit-btn {
-    background-color: var(--primary-color);
-    color: white;
-    border: none;
-    padding: 0.85rem 1.5rem;
-    font-size: 1.1rem;
-    font-weight: bold;
-    border-radius: 6px;
-    cursor: pointer;
+    display: block;
     width: 100%;
-    transition: background-color 0.2s ease;
+    padding: 14px;
+    background-color: var(--primary-color);
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 .submit-btn:hover {
-    background-color: #b3573f; /* darker shade of secondary, ~4.8:1 contrast with white (fixes a11y flag) */
+    background-color: #b3573f;
 }
 
-/* ================= FOOTER ================= */
-footer {
+/* EMPLOYEE SECTION */
+
+.employee-section {
+    background-color: #eef2f5;
+    padding: 25px 16px;
+    text-align: center;
+}
+
+.employee-section h2 {
+    margin-bottom: 20px;
+}
+
+.employee-grid {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--primary-color);
-    color: #fff;
-    padding: 16px;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
 }
 
-footer p {
-    margin: 0;
-    padding: 0;
-    color: #fff;
+.employee-grid figure {
+    width: 30%;
+    min-width: 150px;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.socialmedia {
-    display: flex;
-    gap: 12px;
-    margin: 0;
-    padding: 0;
+.employee-grid img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 4px;
 }
 
-.socialmedia a {
-    text-decoration: none;
+.employee-grid figcaption {
+    margin-top: 5px;
+    font-size: 0.9rem;
 }
 
-.socialmedia img {
-    width: 32px;
-    height: 
-/* ================= WEEK 6 HOME PAGE ================= */
+/* =========================================
+   WEEK 6 HOME PAGE
+   ========================================= */
 
-/* Hero Image */
+/* HOME HERO */
+
 .home-hero {
     position: relative;
     padding: 0;
@@ -272,7 +392,8 @@ footer p {
     border-radius: 8px;
 }
 
-/* Newsletter Section */
+/* NEWSLETTER */
+
 .newsletter-section {
     background-color: #e3f0ed;
     text-align: center;
@@ -326,7 +447,8 @@ footer p {
     background-color: #b3573f;
 }
 
-/* Home Page Adventure Grid */
+/* HOME ADVENTURES */
+
 .home-adventures {
     padding: 24px 16px;
 }
@@ -368,7 +490,8 @@ footer p {
     text-align: center;
 }
 
-/* Home Introduction */
+/* HOME INTRODUCTION */
+
 .home-introduction {
     text-align: center;
     padding: 30px 24px;
@@ -397,13 +520,61 @@ footer p {
     color: #ffffff;
 }
 
-/* ================= RESPONSIVE DESIGN ================= */
+/* =========================================
+   FOOTER AND SOCIAL MEDIA
+   ========================================= */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color);
+    color: #ffffff;
+    padding: 16px;
+}
+
+footer p {
+    margin: 0;
+    color: #ffffff;
+}
+
+.socialmedia {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+}
+
+.socialmedia a {
+    text-decoration: none;
+}
+
+.socialmedia img {
+    display: block;
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+   ========================================= */
 
 @media screen and (max-width: 850px) {
 
-    header, main, footer {
+    header,
+    main,
+    footer {
         width: 100%;
     }
+
+    .map-form-section {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
 
     header {
         grid-template-columns: 1fr;
@@ -416,20 +587,21 @@ footer p {
         flex-wrap: wrap;
     }
 
-    footer {
-        flex-wrap: wrap;
-        gap: 16px;
-        justify-content: center;
-        text-align: center;
+    header img {
+        width: 110px;
     }
 
     .map-form-section {
         grid-template-columns: 1fr;
     }
 
-}
+    .history-content {
+        grid-template-columns: 1fr;
+    }
 
-@media screen and (max-width: 550px) {
+    .adventure-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
     .home-hero img {
         height: 250px;
@@ -462,14 +634,14 @@ footer p {
         max-width: 280px;
     }
 
-    .map-form-section {
-        padding: 12px;
+    footer {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .socialmedia {
+        justify-content: center;
     }
 
 }
-
-
-
-
-
-
