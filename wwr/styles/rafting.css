@@ -641,7 +641,21 @@ footer p {
     }
 
     .socialmedia {
-        justify-content: center;
-    }
-
+        justify-content: .home-hero {
+    position: relative;
 }
+
+.home-hero h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 77, 97, 0.85);
+    padding: 15px;
+    border-radius: 8px;
+    z-index: 2;
+}
+
