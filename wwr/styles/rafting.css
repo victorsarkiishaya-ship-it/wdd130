@@ -796,3 +796,76 @@ footer p {
     }
 }
 
+
+/* WEEK 6 - MOBILE RESPONSIVENESS FIX */
+
+* {
+    box-sizing: border-box;
+}
+
+header,
+main,
+footer {
+    width: 100%;
+    max-width: 840px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.trips-hero img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.trips-grid {
+    width: 100%;
+}
+
+.trip-table-section {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.trip-table-section table {
+    width: 100%;
+    min-width: 420px;
+    border-collapse: collapse;
+}
+
+.trip-table-section th,
+.trip-table-section td {
+    border: 1px solid #004d61;
+    padding: 12px 8px;
+    text-align: center;
+}
+
+@media screen and (max-width: 700px) {
+    header,
+    main,
+    footer {
+        width: 100%;
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .trips-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .trip-card img {
+        width: 100%;
+        height: auto;
+    }
+
+    .trips-hero img {
+        height: 220px;
+    }
+
+    .trip-table-section th,
+    .trip-table-section td {
+        padding: 9px 5px;
+        font-size: 13px;
+    }
+}
+
