@@ -112,3 +112,10 @@
     height: 24px;
     object-fit: contain;
 }
+.socialmedia a[href*="twitter"] img {
+    width: 18px !important;
+    height: 18px !important;
+    max-width: 18px !important;
+    max-height: 18px !important;
+    object-fit: contain;
+}
