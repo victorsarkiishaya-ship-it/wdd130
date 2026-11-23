@@ -105,3 +105,10 @@
         font-size: 14px;
     }
 }
+
+/* Reduce Twitter logo size */
+.socialmedia a[href*="twitter"] img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
