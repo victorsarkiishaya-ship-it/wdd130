@@ -863,6 +863,72 @@ footer {
     .trip-table-section th,
     .trip-table-section td {
         padding: 9px 5px;
-        font-size: 13px;
+        font-size: /* TRIPS PAGE LAYOUT FIX */
+
+header,
+main,
+footer {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.trips-hero {
+    width: 100%;
+}
+
+.trips-hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.trips-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.trip-card img {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.trip-table-section {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.trip-table-section table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+@media screen and (max-width: 600px) {
+    .trips-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .trip-card img {
+        height: auto;
+    }
+
+    header {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    header nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    footer {
+        width: 100%;
     }
 }
+
